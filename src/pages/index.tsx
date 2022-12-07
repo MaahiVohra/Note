@@ -28,10 +28,6 @@ const Home: NextPage<NoteListProps> = ({
       return (
         (title === "" ||
           note.title.toLowerCase().includes(title.toLowerCase())) &&
-        // (selectedTags.length === 0 ||
-        //   selectedTags.every((tag) => {
-        //     note.tagIds.some((noteTag) => noteTag === tag.id);
-        //   }))
         (selectedTags.length === 0 ||
           selectedTags.every((tag) =>
             note.tagIds.some((notetag) => notetag === tag.id)
@@ -129,7 +125,7 @@ const Home: NextPage<NoteListProps> = ({
     </>
   );
 };
-function NoteCard({ id, title, tagIds, availableTags }: SimplifiedNote) {
+function NoteCard({ title, tagIds, availableTags }: SimplifiedNote) {
   const filteredTags = availableTags.filter((tag) => tagIds.includes(tag.id));
   return (
     <div className="m-3 h-48 max-h-52 max-w-sm overflow-hidden rounded shadow-lg">

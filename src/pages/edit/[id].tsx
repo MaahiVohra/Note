@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import NoteForm from "../../Common/noteform";
-import type { Note, NoteData, RawNoteData, Tag } from "../app";
+import type { Note, RawNoteData, Tag } from "../app";
 type EditFormProps = {
   onUpdate: (data: RawNoteData) => void;
   onAddTag: (tag: Tag) => void;

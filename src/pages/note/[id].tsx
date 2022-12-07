@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import type { Note, Tag } from ".././app";
 import ReactMarkdown from "react-markdown";
-import { Head } from "next/document";
 import Link from "next/link";
 
 type NoteListProps = {

@@ -33,7 +33,11 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     const [tags, setTags] = useLocalStorage<RawNote[]>("TAGS", []);
     const router = useRouter();
     const { id } = router.query;
-    if (!notes.find((s) => s.id === id) && router.pathname !== "/") {
+    if (
+      !notes.find((s) => s.id === id) &&
+      router.pathname !== "/" &&
+      router.pathname !== "/new"
+    ) {
       router.push("/");
     }
     function onCreateNote(data: RawNoteData) {

@@ -108,7 +108,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             property="og:description"
             content="Organize your thoughts and ideas with ease using our intuitive notes taking app."
           />
-          <meta property="og:image" content="" />
+          <meta property="og:image" content="image-main.jpg" />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta
@@ -120,7 +120,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             property="twitter:description"
             content="Organize your thoughts and ideas with ease using our intuitive notes taking app."
           />
-          <meta property="twitter:image" content="" />
+          <meta property="twitter:image" content="image-main.jpg" />
           <link rel="icon" href="favicon.ico" />
         </Head>
         <Component

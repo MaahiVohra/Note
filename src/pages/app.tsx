@@ -73,7 +73,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     }
     return (
       <ThemeProvider enableColorScheme={false} enableSystem={false}>
-        {/* <Head>
+        <Head>
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -91,7 +91,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             sizes="16x16"
             href="favicon-16x16.png"
           />
-          <link rel="manifest" href="/site.webmanifest" />
           <meta name="title" content="Note - A notes taking app" />
           <meta
             name="description"
@@ -122,7 +121,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           />
           <meta property="twitter:image" content="image-main.jpg" />
           <link rel="icon" href="favicon.ico" />
-        </Head> */}
+        </Head>
         <Component
           {...pageProps}
           onSubmit={onCreateNote}

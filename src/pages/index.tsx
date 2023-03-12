@@ -39,54 +39,6 @@ const Home: NextPage<NoteListProps> = ({
     <>
       <Head>
         <title>Note | Home</title>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="title" content="Note - A notes taking app" />
-        <meta
-          name="description"
-          content="Organize your thoughts and ideas with ease using our intuitive notes taking app"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://note-gamma-azure.vercel.app/"
-        />
-        <meta property="og:title" content="Note - A notes taking app" />
-        <meta
-          property="og:description"
-          content="Organize your thoughts and ideas with ease using our intuitive notes taking app."
-        />
-        <meta property="og:image" content="image-main.jpg" />
-
-        <meta property="twitter:card" content="image-main.jpg" />
-        <meta
-          property="twitter:url"
-          content="https://note-gamma-azure.vercel.app/"
-        />
-        <meta property="twitter:title" content="Note - A notes taking app" />
-        <meta
-          property="twitter:description"
-          content="Organize your thoughts and ideas with ease using our intuitive notes taking app."
-        />
-        <meta property="twitter:image" content="image-main.jpg" />
-        <link rel="icon" href="favicon.ico" />
       </Head>
       <header className="mx-10 mt-10 flex justify-between md:col-span-1">
         <div className=" px-4 sm:px-0">

@@ -72,7 +72,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       setTags((prev) => [...prev, newTag]);
     }
     return (
-      <ThemeProvider enableColorScheme={false} enableSystem={false}>
+      <>
         <Head>
           <link
             rel="apple-touch-icon"
@@ -122,17 +122,19 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           <meta property="twitter:image" content="image-main.jpg" />
           <link rel="icon" href="favicon.ico" />
         </Head>
-        <Component
-          {...pageProps}
-          onSubmit={onCreateNote}
-          onDeleteNote={onDeleteNote}
-          onAddTag={addTag}
-          onUpdate={onUpdateNote}
-          availableTags={tags}
-          notes={notes}
-          suppressHydrationWarning
-        />
-      </ThemeProvider>
+        <ThemeProvider enableColorScheme={false} enableSystem={false}>
+          <Component
+            {...pageProps}
+            onSubmit={onCreateNote}
+            onDeleteNote={onDeleteNote}
+            onAddTag={addTag}
+            onUpdate={onUpdateNote}
+            availableTags={tags}
+            notes={notes}
+            suppressHydrationWarning
+          />
+        </ThemeProvider>
+      </>
     );
   }
 };

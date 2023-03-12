@@ -38,6 +38,7 @@ const Home: NextPage<NoteListProps> = ({
   return (
     <>
       <Head>
+        <title>Note | Home</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

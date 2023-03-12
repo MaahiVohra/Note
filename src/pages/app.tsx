@@ -74,23 +74,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     return (
       <>
         <Head>
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="apple-touch-icon.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="favicon-16x16.png"
-          />
           <meta name="title" content="Note - A notes taking app" />
           <meta
             name="description"
@@ -107,9 +90,9 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             property="og:description"
             content="Organize your thoughts and ideas with ease using our intuitive notes taking app."
           />
-          <meta property="og:image" content="image-main.jpg" />
+          <meta property="og:image" content="/image-main.jpg" />
 
-          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:card" content="/image-main.jpg" />
           <meta
             property="twitter:url"
             content="https://note-gamma-azure.vercel.app/"
@@ -119,7 +102,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             property="twitter:description"
             content="Organize your thoughts and ideas with ease using our intuitive notes taking app."
           />
-          <meta property="twitter:image" content="image-main.jpg" />
+          <meta property="twitter:image" content="/image-main.jpg" />
           <link rel="icon" href="favicon.ico" />
         </Head>
         <ThemeProvider enableColorScheme={false} enableSystem={false}>

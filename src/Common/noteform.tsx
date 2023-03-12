@@ -1,8 +1,9 @@
 import CreatableSelect from "react-select/creatable";
 import Link from "next/link";
 import type { NoteData, RawNoteData, Tag } from "../pages/app";
-import { useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { v4 as uuidV4 } from "uuid";
+import { useRouter } from "next/router";
 type NoteFormProps = {
   onSubmit: (data: RawNoteData) => void;
   onAddTag: (tag: Tag) => void;
@@ -22,7 +23,9 @@ export default function NoteForm({
   const [selectedTags, setSelectedTags] = useState<Tag[]>(
     availableTags.filter((tag) => tagIds.includes(tag.id))
   );
-  const handleSubmit = () => {
+  const router = useRouter();
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
     // titleRef and markdownRef will never be null but we should not force non-null assertion
     if (titleRef.current === null || markdownRef.current === null) return;
     onSubmit({
@@ -30,6 +33,7 @@ export default function NoteForm({
       markdown: markdownRef.current.value,
       tagIds: selectedTags.map((tag) => tag.id),
     });
+    router.push("/");
   };
   return (
     <>
@@ -42,7 +46,7 @@ export default function NoteForm({
           </div>
         </div>
         <div className="mt-5 md:col-span-2 md:mt-0">
-          <form action="/" onSubmit={handleSubmit} method="POST">
+          <form onSubmit={(e) => handleSubmit(e)}>
             <div className="shadow sm:overflow-hidden sm:rounded-md">
               <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                 <div className="grid grid-cols-6 gap-6">

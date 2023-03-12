@@ -15,16 +15,13 @@ const New: NextPage<NoteFormProps> = ({
   return (
     <>
       <Head>
-        <title>Note</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Note | New</title>
       </Head>
-      <main className="p-10">
-        <NoteForm
-          onSubmit={onSubmit}
-          onAddTag={onAddTag}
-          availableTags={availableTags}
-        />
-      </main>
+      <NoteForm
+        onSubmit={onSubmit}
+        onAddTag={onAddTag}
+        availableTags={availableTags}
+      />
     </>
   );
 };

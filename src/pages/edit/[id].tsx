@@ -21,19 +21,16 @@ const Edit: NextPage<EditFormProps> = ({
   return (
     <>
       <Head>
-        <title>Note</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Note | Edit</title>
       </Head>
-      <main className="p-10">
-        <NoteForm
-          title={currentNote?.title}
-          markdown={currentNote?.markdown}
-          tagIds={currentNote?.tagIds}
-          onSubmit={(data) => onUpdate(data)}
-          onAddTag={onAddTag}
-          availableTags={availableTags}
-        />
-      </main>
+      <NoteForm
+        title={currentNote?.title}
+        markdown={currentNote?.markdown}
+        tagIds={currentNote?.tagIds}
+        onSubmit={(data) => onUpdate(data)}
+        onAddTag={onAddTag}
+        availableTags={availableTags}
+      />
     </>
   );
 };

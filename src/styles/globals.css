@@ -6,3 +6,6 @@
 .react-select__input:focus {
   box-shadow: none;
 }
+button {
+  @apply font-cursive;
+}

@@ -74,12 +74,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     return (
       <>
         <Head>
-          <meta name="title" content="Note - A notes taking app" />
-          <meta
-            name="description"
-            content="Organize your thoughts and ideas with ease using our intuitive notes taking app"
-          />
-
           <meta property="og:type" content="website" />
           <meta
             property="og:url"
@@ -92,7 +86,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           />
           <meta property="og:image" content="/image-main.jpg" />
 
-          <meta property="twitter:card" content="/image-main.jpg" />
+          <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:url"
             content="https://note-gamma-azure.vercel.app/"

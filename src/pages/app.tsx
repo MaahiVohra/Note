@@ -2,6 +2,7 @@ import { type AppType } from "next/dist/shared/lib/utils";
 import useLocalStorage from "../Common/useLocalStorage";
 import { v4 as uuidV4 } from "uuid";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export type RawNote = {
   id: string;
@@ -33,13 +34,16 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     const [tags, setTags] = useLocalStorage<RawNote[]>("TAGS", []);
     const router = useRouter();
     const { id } = router.query;
-    if (
-      !notes.find((s) => s.id === id) &&
-      router.pathname !== "/" &&
-      router.pathname !== "/new"
-    ) {
-      router.push("/");
-    }
+    useEffect(() => {
+      if (
+        !notes.find((s) => s.id === id) &&
+        router.pathname !== "/" &&
+        router.pathname !== "/new"
+      ) {
+        router.push("/");
+      }
+    }, []);
+
     function onCreateNote(data: RawNoteData) {
       setNotes((prevNotes) => {
         return [...prevNotes, { ...data, id: uuidV4() }];
